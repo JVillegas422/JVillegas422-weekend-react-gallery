@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function GalleryList({ addGalleryItem }) {
+function GalleryList({ addNewGalleryItem }) {
     let [newItemName, setNewItemName] = useState('');
     let [newItemText, setNewItemText] = useState('');
 
@@ -19,7 +19,7 @@ function GalleryList({ addGalleryItem }) {
         setNewItemText('');
 
         // call function on App to do the actual POST
-        addGalleryItem(newItem);
+        addNewGalleryItem(newItem);
     };
 
     return (
@@ -27,4 +27,6 @@ function GalleryList({ addGalleryItem }) {
             Testing. . .
         </div>
     )
-}
+};
+
+export default GalleryList;
