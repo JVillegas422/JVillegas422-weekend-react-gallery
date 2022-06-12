@@ -1,32 +1,13 @@
-import { useState } from 'react';
+// import GalleryItem from "../GalleryItem/GallaryItem";
 
-function GalleryList({ addNewGalleryItem }) {
-    let [newItemName, setNewItemName] = useState('');
-    let [newItemText, setNewItemText] = useState('');
+// function GalleryList({ item, changeItemText }) {
+//     let [] = useState();
 
-    // handle adding new item
-    const handleSubmit = (event) => {
-        event.preventDefault();
+//     return (
+//         <div>
 
-        // package state variables into object
-        const newItem = {
-            name: newItemName,
-            text: newItemText
-        };
+//         </div>
+//     )
+// }
 
-        // reset state
-        setNewItemName('');
-        setNewItemText('');
-
-        // call function on App to do the actual POST
-        addNewGalleryItem(newItem);
-    };
-
-    return (
-        <div>
-            Testing. . .
-        </div>
-    )
-};
-
-export default GalleryList;
+// export default GalleryList;
