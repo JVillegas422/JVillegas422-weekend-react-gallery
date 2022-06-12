@@ -6,27 +6,27 @@ import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-//   let [galleryList, setGalleryList] = useState([]);
+  let [GalleryList, setGalleryList] = useState([]);
 
-//   // Runs when the component is first put on the DOM
-//   useEffect(() => {
-//     getGallery();
-//   });
+  // Runs when the component is first put on the DOM
+  // useEffect(() => {
+  //   getGallery();
+  // });
 
-// // GET data from server
-// const fetchGalleryList = () => {
-//   axios({
-//     method: 'GET',
-//     url: '/gallery',
-//   })
-//     .then((response) => {
-//       setGalleryList(response);
-//       console.log('Gallery items:', response);
-//   })
-//     .catch((err) => {
-//       console.log('error in GET', err);
-//   });
-// };
+// GET data from server
+const fetchGalleryList = () => {
+  axios({
+    method: 'GET',
+    url: '/gallery',
+  })
+    .then((response) => {
+      setGalleryList(response);
+      console.log('Gallery items:', response);
+  })
+    .catch((err) => {
+      console.log('error in GET', err);
+  });
+};
 
 // // Post to server
 // const addGalleryItem = (newGalleryItemInput) => {
