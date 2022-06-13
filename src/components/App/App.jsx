@@ -27,6 +27,19 @@ function App() {
     });
   };
 
+  const loveItBtn = (id) => {
+    axios({
+      method: 'PUT',
+      url: '/gallery/${id}',
+    })
+      .then(() => {
+        fetchGalleryList();
+    })
+      .catch((err) => {
+        console.log('LoveItBtn failed', err);
+    });
+  };
+
 // // Post to server
 // const addGalleryItem = (newGalleryItemInput) => {
 //   axios

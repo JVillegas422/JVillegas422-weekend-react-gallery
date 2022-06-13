@@ -1,15 +1,17 @@
 import { useState } from 'react';
 
-function GalleryItem({ displayGalleryItem }) {
-    let [likePhoto, setLikePhoto] = useState('');
+function GalleryItem({ displayGalleryItem, loveIt }) {
+    let [loveItPhoto, setLoveItPhoto] = useState(GalleryItem.loveIt);
     let [showItemText, setShowItemText] = useState(false);
 
     // handle photo likes/love it button
-    const likePhotoBtn = (evt) => {
+    const loveItPhotoBtn = (evt) => {
         evt.preventDefault();
 
-        console.log('Likes is working!', likePhoto);
-        hitLike(evt.target.id);
+        // console.log('Likes is working!', loveItPhoto);
+        loveItBtn(evt.target.id)
+        setLoveItPhoto(loveItPhoto + 1);
+        GalleryItem.loveIt = loveItPhoto;
     };
 
     return (
@@ -24,7 +26,7 @@ function GalleryItem({ displayGalleryItem }) {
                 </p>
             </div>}
             <button
-            id={displayGalleryItem.id} onClick={likePhotoBtn}>
+            id={displayGalleryItem.id} onClick={loveItPhotoBtn}>
                 Love it!
             </button>
         </div>
