@@ -1,26 +1,16 @@
 import { useState } from 'react';
 
 function GalleryItem({ displayGalleryItem }) {
-    let [itemName, setItemName] = useState('');
+    let [likePhoto, setLikePhoto] = useState('');
     let [showItemText, setShowItemText] = useState(false);
 
-    // handle adding new item
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
+    // handle liking photo
+    const handleSubmit = (evt) => {
+        evt.preventDefault();
 
-    //     // package state variables into object
-    //     const newItem = {
-    //         name: newItemName,
-    //         text: newItemText
-    //     };
-
-    //     // reset state
-    //     setNewItemName('');
-    //     setNewItemText('');
-
-    //     // call function on App to do the actual POST
-    //     addNewGalleryItem(newItem);
-    // };
+        console.log('Likes is working!', hitLike);
+        hitLike(evt.target.id);
+    };
 
     return (
         <div className='image-container' onClick={() => setShowItemText(!showItemText)}>
