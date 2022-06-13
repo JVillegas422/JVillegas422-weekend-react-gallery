@@ -18,6 +18,7 @@ router.put('/like/:id', (req, res) => {
 
 // GET Route
 router.get('/', (req, res) => {
+    console.log('In router.get', galleryItems);
     res.send(galleryItems);
 }); // END GET Route
 

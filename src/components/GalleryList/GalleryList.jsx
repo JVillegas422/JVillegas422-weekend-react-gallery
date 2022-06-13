@@ -1,13 +1,24 @@
-// import GalleryItem from "../GalleryItem/GallaryItem";
+import GalleryItem from "../GalleryItem/GallaryItem";
 
-// function GalleryList({ item, changeItemText }) {
-//     let [] = useState();
+function GalleryList({ galleryItems }) {
+    console.log('In gallery list', galleryItems);
 
-//     return (
-//         <div>
+    return (
+        <>
+        <div>
+          <p>Gallery goes here</p>
+        </div>
+        <div>
+            {galleryItems.map((photoItem) => {
+                console.log('Gallery items here', photoItem.id);
+                return (
+                <GalleryItem key={photoItem.id} displayGalleryItem={photoItem} 
+                />
+                )
+            })}
+        </div>
+        </>
+      );
+}
 
-//         </div>
-//     )
-// }
-
-// export default GalleryList;
+export default GalleryList;
