@@ -30,7 +30,13 @@ function GalleryItem({ displayGalleryItem, loveItBtn }) {
             id={displayGalleryItem.id} likes={displayGalleryItem.likes} onClick={loveItPhotoBtn}>
                 Love it!
             </button>
-            <h4>{loveItPhoto} people love this!</h4>
+            {(loveItPhoto > 0) ? 
+            <h4>
+                {loveItPhoto} people love this!
+            </h4> : 
+            <h3>
+                No People love this 😞 
+            </h3>}
             </div>
         </div>
     )
