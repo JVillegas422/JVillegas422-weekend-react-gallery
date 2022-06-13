@@ -30,38 +30,24 @@ function App() {
   const loveItBtn = (id) => {
     axios({
       method: 'PUT',
-      url: '/gallery/${id}',
+      url: `/gallery/like/:id`,
     })
       .then(() => {
-        fetchGalleryList();
     })
       .catch((err) => {
         console.log('LoveItBtn failed', err);
     });
   };
 
-// // Post to server
-// const addGalleryItem = (newGalleryItemInput) => {
-//   axios
-//     .post('/gallery', newGalleryItemInput)
-//     .then((response) => {
-//       console.log('In POST /gallery', response);
-//       fetchGalleryList();
-//   })
-//     .catch((err) => {
-//       alert('Error, unable to add item.');
-//       console.log('err');
-//   });
-// };
-
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
-        <GalleryList galleryItems={galleryList}
-        />
+        <div>
+          <GalleryList galleryItems={galleryList} loveItBtn={loveItBtn}
+          />
+        </div>
       </div>
     );
 }

@@ -1,18 +1,18 @@
 import GalleryItem from "../GalleryItem/GallaryItem";
 
-function GalleryList({ galleryItems }) {
+function GalleryList({ galleryItems, loveItBtn }) {
     console.log('In gallery list', galleryItems);
 
     return (
         <>
         <div>
-          <p>Welcome to the Photo Gallery</p>
+          <h3>Welcome to the my Family Gallery!</h3>
         </div>
         <div>
             {galleryItems.map((photoItem) => {
                 console.log('Gallery items here', photoItem.id);
                 return (
-                <GalleryItem key={photoItem.id} displayGalleryItem={photoItem}
+                <GalleryItem key={photoItem.id} displayGalleryItem={photoItem} loveItBtn={loveItBtn}
                 />
                 )
             })}
