@@ -6,13 +6,13 @@ function GalleryList({ galleryItems }) {
     return (
         <>
         <div>
-          <p>Gallery goes here</p>
+          <p>Welcome to the Photo Gallery</p>
         </div>
         <div>
             {galleryItems.map((photoItem) => {
                 console.log('Gallery items here', photoItem.id);
                 return (
-                <GalleryItem key={photoItem.id} displayGalleryItem={photoItem} 
+                <GalleryItem key={photoItem.id} displayGalleryItem={photoItem}
                 />
                 )
             })}

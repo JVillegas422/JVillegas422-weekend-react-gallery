@@ -4,11 +4,11 @@ function GalleryItem({ displayGalleryItem }) {
     let [likePhoto, setLikePhoto] = useState('');
     let [showItemText, setShowItemText] = useState(false);
 
-    // handle liking photo
-    const handleSubmit = (evt) => {
+    // handle photo likes/love it button
+    const likePhotoBtn = (evt) => {
         evt.preventDefault();
 
-        console.log('Likes is working!', hitLike);
+        console.log('Likes is working!', likePhoto);
         hitLike(evt.target.id);
     };
 
@@ -23,6 +23,10 @@ function GalleryItem({ displayGalleryItem }) {
                 {displayGalleryItem.description}
                 </p>
             </div>}
+            <button
+            id={displayGalleryItem.id} onClick={likePhotoBtn}>
+                Love it!
+            </button>
         </div>
     )
 };
