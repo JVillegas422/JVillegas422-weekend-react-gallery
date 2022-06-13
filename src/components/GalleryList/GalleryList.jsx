@@ -6,7 +6,7 @@ function GalleryList({ galleryItems, loveItBtn }) {
     return (
         <>
         <div>
-          <h3>Welcome to the my Family Gallery!</h3>
+          <h3>Welcome to My Family Photo Gallery!</h3>
         </div>
         <div>
             {galleryItems.map((photoItem) => {
